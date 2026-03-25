@@ -1,0 +1,443 @@
+
+/* *********************************************************
+********************************************************
+/* ESTILO BOTONES - silvia
+**********************************************************
+******************************************************** */
+
+.btn-custom {
+    background-color: white;
+    color: #0583c3;
+    border: 1px solid #0583c3;
+}
+
+
+.btn-custom:hover {
+    background-color: #0583c3; /* Fondo amarillo */
+    color: white; /* Texto negro */
+}
+
+
+.btn-custom.btn-custom.active {
+    background-color: #0583c3; 
+    color: white; 
+}
+
+
+#anadir{
+    background-color: #f28d68;
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* #menu_principal.active {
+    color: #0583c3; 
+    background-color: white; 
+} */
+
+
+/* *********************************************************
+***modales - silvia
+**********************************************************
+******************************************************** */
+
+.modal-header{
+    background-color: #d6eaf8;
+}
+
+.modal-title{
+    color:#0583c3;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.input-group-text{
+    background-color: #d6eaf8;
+    color:#0583c3;
+    font-weight: bold;
+}
+
+
+#boton-modal{
+    background-color: #0583c3; 
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+
+
+
+/* MENU PRINCIPAL SEGUIMIENTO */
+
+
+
+
+.nombre_modulo_seguimiento span{
+  font-size: 24px; 
+  font-weight: bold; 
+  color: #0583c3;
+}
+
+
+/* ARCHIVO CUMPLIMIENTO */
+.total-cuadro{
+    background-color: #0583c3; 
+    color: white; 
+    padding: 5px 10px; 
+    margin-left: 30px; 
+    margin-top:30px;
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 140px; height: 70px;
+}
+.total-cuadro span{
+   font-size: 14px; 
+   font-weight: bold;
+   margin-bottom: 3px;
+}
+
+
+
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** ESTILOS HEADER ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .usuario-logout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botones de usuario y logout */
+.btn-usuario, #boton_logout {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-usuario {
+    background-color: #2980B9;
+    color: white;
+}
+
+.btn-usuario:hover {
+    background-color: orangered;
+    color:white;
+}
+
+#boton_logout {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+}
+
+#boton_logout img {
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+#boton_logout:hover {
+    background-color: orangered;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+    }
+
+    header .usuario-logout {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    header .info-usuario a {
+        font-size: 14px;
+    }
+
+    header .btn-logout img {
+        width: 20px;
+    }
+}
+
+/* Margen izquierdo pequeño */
+.ms-2 {
+    margin-left: 8px;
+}
+
+
+/****************************  MENU GENERAL ***********************************/
+
+
+.navbar {
+    background-color: #2C3E50;
+    padding: 10px 20px;
+}
+
+
+.navbar-nav {
+    margin-left: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ECF0F1;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 16px;
+    /* text-transform: uppercase; */
+    transition: all 0.3s ease;
+}
+
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffffff;
+    background-color: #2980B9;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de hamburguesa (en dispositivos móviles) */
+.navbar-toggler {
+    background-color: #2980B9;
+}
+
+.navbar-toggler-icon {
+    color: white;
+    border-color: 2px white;
+}
+
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/****************************  MENU CONFIGURACION ***********************************/
+
+
+
+.menu-configuracion {
+    background-color: #d6eaf8;
+}
+
+
+.enlace-menu-configuracion {
+    color: #0583c3 !important;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.enlace-menu-configuracion:hover, 
+.enlace-menu-configuracion:active {
+    background-color: #ffffff !important;
+    color: #2980B9 !important;
+     border-radius: 5px !important;
+}
+
+ .enlace-menu-configuracion.active {
+    background-color: white !important;  
+    color: #2980B9 !important;
+    border-radius: 5px !important; 
+} 
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** TABLA FORMATO ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+} 
+
+.tabla-formato{
+    table-layout: auto; 
+    width: auto; 
+    margin-top: 30px;
+    margin-left:30px;
+    border-collapse: collapse; 
+    border: 1px solid lightgrey; /* Define un borde de 1px, color negro */
+}
+
+th, td {
+    border: 1px solid lightgrey; /* Define un borde de 1px, color negro */
+}
+
+.tabla-formato thead th{
+    background-color:#0583c3;
+    color:white;
+}
+
+.tabla-formato tbody td a{
+    color:#0583c3;
+}
+
+.icono{
+    width:25px;
+    height:25px;
+    margin-left:10px
+} 
+ 
+
+
+
+/************* VOLVER ******************/
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #2980b9;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.btn-volver:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.btn-volver i {
+    margin-right: 6px;
+}
+
+
+/************* MODAL ******************/
+
+#boton-modal{
+    background-color: #0583c3; 
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+#boton-modal:hover{
+    background-color: orangered; 
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** TABLA VISUALIZAR *****************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+.tabla-visualizar thead th{
+    background-color:#0583c3;
+    color:white;
+}
+
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/************************************** BADGE *********************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+.badge {
+    background-color: orangered;
+    color: white;      
+    border-radius: 50%;     
+    padding: 0.3em 0.6em;   
+    font-size: 12px;       
+    margin-left: 6px;       
+}
+
+.disabled-link {
+    pointer-events: none;
+    color: #ccc; 
+}
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** ESTILOS FOOTER ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+footer{
+    padding-top: 100px; 
+}
+
+
+.logo-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-container img {
+    object-fit: contain;
+}
+
+
+@media (max-width: 576px) {
+    .logo-container {
+        margin-bottom: 15px; 
+    }
+    footer .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    footer .row {
+        justify-content: center; 
+    }
+}
+

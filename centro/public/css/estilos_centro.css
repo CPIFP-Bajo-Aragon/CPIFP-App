@@ -1,0 +1,439 @@
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** ESTILOS HEADER ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+
+#logo{
+    width:280px;
+}
+
+
+.logo_header_estilo{
+    flex: 0 0 auto;
+}
+
+
+#info_usuario{
+    flex: 1 1 auto; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 1.5em; 
+    color:#2980b9;
+}
+
+
+#boton_logout {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+} 
+
+#boton_logout img {
+    margin-left: 8px;
+    width: 25px;
+    height: 20px;
+} 
+
+#boton_logout:hover {
+    background-color: orangered;
+}
+
+
+
+/************ Responsividad **************/
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+    }
+    header #boton_logout{
+        margin:15px;
+    }
+    #logo{
+        width:230px;
+    }
+    #info_usuario{
+        font-size: 1em; 
+    }
+}
+
+
+
+/****************************  MENU ***********************************/
+
+
+.navbar {
+    background-color: #2C3E50;
+    padding: 10px 20px;
+}
+
+
+.navbar-nav {
+    margin-left: 0;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    color: #ECF0F1;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffffff;
+    background-color: #2980B9;
+    border-radius: 5px;
+}
+
+
+/*********** Estilos para el botón de hamburguesa (en dispositivos móviles) ****************/
+
+.navbar-toggler {
+    background-color: #2980B9;
+}
+
+.navbar-toggler-icon {
+    color: white;
+    border-color: 2px white;
+}
+
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** ESTILOS BODY ********************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.tarjeta{
+    margin-left: 20px; 
+    margin-right: 20px; 
+    background-color:white;
+    margin-bottom: 10px;
+}
+
+
+
+/************ Responsividad **************/
+
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 0.8rem;
+    }
+    .modal-dialog {
+        max-width: 90%;
+    }
+}
+
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** TABLA FORMATO ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+} 
+
+.tabla-formato{
+    table-layout: auto; 
+    width: auto; 
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+.tabla-formato thead th{
+    background-color:#2980b9;
+    color:white;
+}
+
+.tabla-formato tbody td a{
+    color:#2980b9;
+}
+
+.icono{
+    width:25px;
+    height:25px;
+    margin-left:10px
+} 
+ 
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/*************************************** MODALES ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+.modal-header{
+    background-color: #d6eaf8;
+}
+
+.modal-title{
+    color:#2980b9;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.modal-body{
+    text-align: center;
+}
+
+.input-group-text{
+    background-color: #d6eaf8;
+    color:#2980b9;
+    font-weight: bold;
+}
+
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/*************************************** BOTONES ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+/************* CUSTOM ******************/
+
+.btn-custom {
+    background-color: white;
+    color: #2980b9;
+    border: 1px solid #2980b9;
+}
+
+.btn-custom:hover,
+.btn-custom.active {
+    background-color: #2980b9;
+    color: white;
+}
+
+
+
+/************* MODAL ******************/
+
+#boton-modal{
+    background-color: #2980b9; 
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+#boton-modal:hover{
+    background-color: orangered; 
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+
+/************* VOLVER ******************/
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #2980b9;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.btn-volver:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.btn-volver i {
+    margin-right: 6px;
+}
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** OTROS ESTILOS ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+#ciclo_encabezado{
+    font-size: 1.5rem; 
+    color: #2980b9;
+}
+
+#modulos_encabezado{
+   color: #2980b9;
+}
+
+#icono_ver{
+    width:30px; height:30px";
+}
+
+
+.circulo_mas{
+    color: white; 
+    font-size: 1.3em; 
+    vertical-align: middle;
+}
+
+
+.mi_perfil_estilo{
+    color: #2980b9; 
+    margin-right:20px;
+}
+
+.input_label_estilo{
+    width: 140px;
+}
+
+.input_label_mi_perfil{
+    width: 100%; 
+    max-width: 180px;
+}
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** ESTILOS FOOTER ******************************************/
+/******************************************************************************************/
+/******************************************************************************************/
+
+
+footer{
+    padding-top: 100px; 
+}
+
+
+.logo-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-container img {
+    object-fit: contain;
+}
+
+
+/********* tamaño logos ************/
+
+.logo_ue_estilo,
+.logo_chomon_estilo{
+    width: 45%;
+}
+
+.logo_mefpd_estilo{
+    width: 60%;
+}
+
+.logo_prtr_estilo,
+.logo_sierra_estilo,
+.logo_asistec_estilo{
+    width: 50%;
+}
+
+.logo_cpifp_estilo{
+    width: 73%;
+}
+
+
+
+@media (max-width: 576px) {
+    .logo-container {
+        margin-bottom: 15px; 
+    }
+    footer .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    footer .row {
+        justify-content: center; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

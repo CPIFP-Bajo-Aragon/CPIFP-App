@@ -1,0 +1,115 @@
+
+
+/************************************/
+/************ COLORES **************/
+/************************************/
+
+.color_principal {
+    color: #0583c3;
+}
+
+.fondo_principal_texto_blanco {
+    background-color: #0583c3; color:white;
+}
+
+.fondo_claro_texto_principal{
+    background-color: #d6eaf8; color: #0583c3;
+}
+
+td.texto_naranja_fuerte,
+.texto_naranja_fuerte {
+    color: orangered; font-weight: bold;
+}
+
+td.texto_verde_fuerte {
+    color: green; font-weight: bold; 
+}
+
+td.umbral-bajo {
+    color: orangered; font-weight: bold; background-color: #f8d7da; white-space: nowrap;
+}
+
+td.umbral-alto {
+    color: green; font-weight: bold; background-color: #d4edda; white-space: nowrap;
+}
+
+td.fila_promedios {
+    color:white; font-weight: bold; background-color: #0583c3; white-space: nowrap;
+}
+
+
+
+/******************************************************/
+/************ MARGENES, FUENTES, ANCHOS **************/
+/*******************************************************/
+
+.fuente_13px {
+    font-size: 13px;
+}
+
+.margen_bajo_5px {
+    margin-bottom: 5px;
+}
+
+.margen_bajo_10px {
+    margin-bottom: 10px;
+}
+
+.margen_derecho_20px {
+    margin-right: 20px;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.texto_fuerte {
+    font-weight: bold;
+}
+
+.ancho_400px {
+    width:400px;
+}
+
+
+
+/*****************************************/
+/************ OTROS ESTILOS **************/
+/*****************************************/
+
+
+.enlace_estilo {
+    text-decoration: none;
+}
+
+.estilo_cursor {
+    cursor: not-allowed;
+}
+
+.alineado_medio {
+    vertical-align: middle;
+}
+
+.enlace_opaco {
+    opacity: 0.5; cursor: not-allowed; color: #0583c3;
+}
+
+.circulo_info {
+    color: white; cursor: pointer;
+}
+
+.cabecera_btn_volver {
+    color:white; display: flex; justify-content: center;  height: 100%;
+} 
+
+.boton_descargar {
+    padding: 5px 15px; color: #0583c3; margin-right: 10px;
+} 
+
+
+
+
+
+
+
+

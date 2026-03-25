@@ -1,0 +1,13 @@
+.mi_perfil{
+   color:#0583c3; 
+   margin-right:20px;
+}
+
+.titulo_labels{
+   width: 100%; max-width: 180px;
+}
+
+.cursor_estilo{
+   cursor: pointer;
+} 
+
