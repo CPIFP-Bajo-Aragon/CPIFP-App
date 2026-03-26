@@ -1,42 +1,19 @@
 <?php
+// ── Parámetros propios de este MVC ───────────────────────────
+define('RUTA_APP',    dirname(dirname(__FILE__)));
+define('NOMBRE_SITIO', 'Inicio — CPIFP Bajo Aragón');
 
-
-// RUTA APLICACION
-define('RUTA_APP', dirname(dirname(__FILE__)));
-define('NOMBRE_SITIO', 'Inicio');
-
-define('RUTA_URL', "http://192.168.1.197");
-define('RUTA_CPIFP', RUTA_URL);
-define('RUTA_LOGOUT', RUTA_URL.'/login/logout');
-
-
-
-// REFERENTE A LA BBDD
-define('DB_NOMBRE', 'calidapp');
-define('DB_HOST', 'localhost');
-define('DB_USUARIO', 'root');
+// El MVC principal usa su propia BD pública (distinta de interno_calidapp)
+define('DB_HOST',     'localhost');
+define('DB_USUARIO',  'root');
 define('DB_PASSWORD', 'root');
+define('DB_NOMBRE',   'calidapp');
 
+// RUTA_URL del principal es la raíz
+define('RUTA_URL', 'http://192.168.1.197');
 
-
-// REFERENTE A IMAGENES
-define('RUTA_Icon', RUTA_URL . '/public/img/icons/');
-define('RUTA_LOGOS', RUTA_URL . '/public/img/logos/');
-
-
-// Configuracion de correo
-// define('EmailEmisor','noreply@cpifpbajoaragon.com');
-// define('EmailPass','kvAPuHCKX9NSDZts$$py');
-// define('Emisor','CPIFP Bajo Aragón');
-// define('Host','smtp.ionos.es');
-// define('SMTPSecure','TLS');
-// define('Puerto',587);
-
-
-
-
-
-
-
-
-
+// ── Configuración global compartida ──────────────────────────
+// (sobreescribe DB_* con los del principal — se carga DESPUÉS
+//  de las defines propias para que RUTA_CPIFP y recursos queden
+//  disponibles sin redefinir la BD)
+require_once '/var/www/html/shared/config/config_global.php';

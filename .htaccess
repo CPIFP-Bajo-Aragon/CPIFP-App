@@ -3,3 +3,4 @@
     RewriteRule ^$ principal/ [L]
     RewriteRule (.*) principal/$1 [L]
 </IfModule>
+

@@ -1,57 +1,9 @@
+<?php require_once RUTA_FOOTER_LOGOS; ?>
 
-
-  <!-- Footer -->
-  <footer class="text-center mt-5">
-    <div class="container">
- <!-- 
-        <div class="row justify-content-center g-0">
-            <div class="col-4 col-sm-4 col-md-4">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>ue.png" class="img-fluid" alt="Logo UE" style="width: 45%;">
-                </div>
-            </div>
-            <div class="col-4 col-sm-4 col-md-4">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>mefpd.png" class="img-fluid" alt="Logo MEFPD" style="width: 60%;">
-                </div>
-            </div>
-            <div class="col-4 col-sm-4 col-md-4">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>prtr.png" alt="Logo PRTR" style="width: 50%;">
-                </div>
-            </div>
-        </div>
-      
-        <div class="row justify-content-center g-0">
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>logo_cpifp.png" class="img-fluid" alt="CPIFP" style="width: 73%;">
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>sierra_villas.png" class="img-fluid" alt="Sierra Villas" style="width: 50%;">
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 mb-2">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>logoChomon.png" class="img-fluid" alt="Chomón" style="width: 45%;">
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 mb-2">
-                <div class="logo-container">
-                    <img src="<?php echo RUTA_LOGOS ?>logo_asistec.png" class="img-fluid" alt="Asistec" style="width: 50%;">
-                </div>
-            </div>
-        </div>
--->
-
-    </div>
-  </footer>
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<?php if (defined('RUTA_URL') && file_exists(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . parse_url(RUTA_URL, PHP_URL_PATH) . '/public/js/main.js')): ?>
 <script src="<?php echo RUTA_URL ?>/public/js/main.js"></script>
+<?php endif ?>
 
 </body>
 </html>
