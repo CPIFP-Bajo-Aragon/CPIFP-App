@@ -122,6 +122,47 @@ public function nuevo_profesor(){
 
 
 
+/************************ CAMBIAR CONTRASEÑA (ADMIN) ****************************/
+
+public function cambiar_password($id_profesor) {
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $nueva_pass   = trim($_POST['nueva_password']);
+        $confirmar    = trim($_POST['confirmar_password']);
+
+        if (empty($nueva_pass) || strlen($nueva_pass) < 6) {
+            echo "<script>
+                    alert('La contraseña debe tener al menos 6 caracteres.');
+                    window.location.href = '" . RUTA_URL . "/personal/personal_gestion/" . $id_profesor . "';
+                  </script>";
+            exit;
+        }
+
+        if ($nueva_pass !== $confirmar) {
+            echo "<script>
+                    alert('Las contraseñas no coinciden.');
+                    window.location.href = '" . RUTA_URL . "/personal/personal_gestion/" . $id_profesor . "';
+                  </script>";
+            exit;
+        }
+
+        if ($this->personalModelo->cambiar_password($id_profesor, $nueva_pass)) {
+            echo "<script>
+                    alert('Contraseña actualizada correctamente.');
+                    window.location.href = '" . RUTA_URL . "/personal/personal_gestion/" . $id_profesor . "';
+                  </script>";
+        } else {
+            die('Algo ha fallado al cambiar la contraseña.');
+        }
+
+    } else {
+        redireccionar('/personal/personal_gestion/' . $id_profesor);
+    }
+}
+
+
+
 /************************ BORRAR MIEMBRO ****************************/
 
 public function borrar_profesor($id_profesor){

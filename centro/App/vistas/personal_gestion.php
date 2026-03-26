@@ -68,8 +68,11 @@
                 </div>
 
                 <!-- boton envio -->
-                <div class="text-left mt-4">
+                <div class="text-left mt-4 d-flex gap-2">
                     <input type="submit" class="btn" name="aceptar" id="boton-modal" value="Actualizar">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cambiar_password">
+                        <i class="fas fa-key me-1"></i> Cambiar contraseña
+                    </button>
                 </div>
 
         </form>
@@ -200,6 +203,99 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+<!-- modal cambiar contraseña -->
+<div class="modal fade" id="cambiar_password">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+        <!-- modal header -->
+        <div class="modal-header">
+            <p class="modal-title ms-3">
+                <i class="fas fa-key me-2"></i>
+                Cambiar contraseña de <b><?php echo $datos['info_profe'][0]->nombre_completo; ?></b>
+            </p>
+            <button type="button" class="btn-close me-4" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- modal body -->
+        <div class="modal-body info">
+        <div class="row ms-1 me-1">
+        <form action="<?php echo RUTA_URL ?>/personal/cambiar_password/<?php echo $datos['info_profe'][0]->id_profesor ?>" method="post">
+
+            <!-- nueva contraseña -->
+            <div class="row mt-3">
+                <div class="input-group">
+                    <label for="nueva_password" class="input-group-text">Nueva contraseña</label>
+                    <input type="password" class="form-control" id="nueva_password" name="nueva_password"
+                           minlength="6" required placeholder="Mínimo 6 caracteres">
+                </div>
+            </div>
+
+            <!-- confirmar contraseña -->
+            <div class="row mt-3">
+                <div class="input-group">
+                    <label for="confirmar_password" class="input-group-text">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="confirmar_password" name="confirmar_password"
+                           minlength="6" required placeholder="Repite la contraseña">
+                </div>
+            </div>
+
+            <!-- aviso de error de coincidencia (JS) -->
+            <div class="row mt-2">
+                <div class="col">
+                    <small id="error_pass" class="text-danger d-none">Las contraseñas no coinciden.</small>
+                </div>
+            </div>
+
+            <!-- boton envio -->
+            <div class="modal-footer mt-3">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <input type="submit" class="btn" id="btn_confirmar_pass" value="Confirmar cambio">
+            </div>
+
+        </form>
+        </div>
+        </div>
+
+</div>
+</div>
+</div>
+
+<script>
+// Validación en cliente: comprobar que las dos contraseñas coinciden antes de enviar
+(function () {
+    const nueva     = document.getElementById('nueva_password');
+    const confirmar = document.getElementById('confirmar_password');
+    const error     = document.getElementById('error_pass');
+    const btnConf   = document.getElementById('btn_confirmar_pass');
+
+    function validar() {
+        if (confirmar.value && nueva.value !== confirmar.value) {
+            error.classList.remove('d-none');
+            btnConf.disabled = true;
+        } else {
+            error.classList.add('d-none');
+            btnConf.disabled = false;
+        }
+    }
+
+    nueva.addEventListener('input', validar);
+    confirmar.addEventListener('input', validar);
+
+    // Limpiar campos al cerrar la modal para evitar que queden datos visibles
+    document.getElementById('cambiar_password').addEventListener('hidden.bs.modal', function () {
+        nueva.value     = '';
+        confirmar.value = '';
+        error.classList.add('d-none');
+        btnConf.disabled = false;
+    });
+})();
+</script>
 
 
 

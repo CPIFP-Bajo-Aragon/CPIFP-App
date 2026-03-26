@@ -23,7 +23,7 @@
         <header>
             <!-- Logo a la izquierda -->
             <div class="logo_header_stylo">
-                <img id="logo" src="<?php echo RUTA_LOGOS?>logo_cpifp.png">
+                <img id="logo" src="<?php echo RUTA_LOGOS?>logo.png">
             </div>
             <!-- Nombre usuario centrado -->
             <div id="info_usuario">
@@ -56,6 +56,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo (strpos($current_url, '/personal') !== false ? 'active' : '');?>"  href="<?php echo RUTA_URL?>/personal">PERSONAL CENTRO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php echo (strpos($current_url, '/edificio') !== false ? 'active' : '');?>"  href="<?php echo RUTA_URL?>/edificio">ESPACIOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo (strpos($current_url, '/usuario') !== false ? 'active' : '');?>" href="<?php echo RUTA_URL?>/usuario">MI PERFIL</a>

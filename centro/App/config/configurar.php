@@ -7,17 +7,18 @@ define('NOMBRE_SITIO', 'Gestion centro');
 
 
 
-//define('RUTA_CPIFP', "https://cpifpbajoaragon.calidapp.es");
 define('RUTA_CPIFP', "http://192.168.1.197");
 define('RUTA_URL', RUTA_CPIFP . '/centro'); 
 define('RUTA_LOGOUT', RUTA_CPIFP . '/login/logout');
 
 
+
 // REFERENTE A LA BBDD
-define('DB_NOMBRE', 'interno_calidapp');
+define('DB_NOMBRE', 'calidapp');
 define('DB_HOST', 'localhost');
-define('DB_USUARIO', 'interno_ubdcalidapp');
-define('DB_PASSWORD', 'k41c-?55K5UcyJ8^');
+define('DB_USUARIO', 'root');
+define('DB_PASSWORD', 'root');
+
 
 
 // REFERENTE A IMAGENES

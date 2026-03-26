@@ -13,7 +13,7 @@
 class Core{
 
 
-    protected $controladorActual = 'Login';
+    protected $controladorActual = 'Personal';
     protected $metodoActual = 'index';
     protected $parametros = [];
 

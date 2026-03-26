@@ -59,6 +59,22 @@ public function buscar_por_email($email) {
 
 
 
+/************************ CAMBIAR CONTRASEÑA (ADMIN) ****************************/
+
+public function cambiar_password($id_profesor, $nueva_password) {
+    $password_cifrada = password_hash($nueva_password, PASSWORD_DEFAULT);
+    $this->db->query("UPDATE cpifp_profesor SET password = :password WHERE id_profesor = :id");
+    $this->db->bind(':password', $password_cifrada);
+    $this->db->bind(':id', $id_profesor);
+    if ($this->db->execute()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
 /************************ BORRAR MIEMBRO ****************************/
 
 public function borrar_profesor($id_prof){
