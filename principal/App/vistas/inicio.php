@@ -24,6 +24,7 @@
         <ul class="enlaces">
             <!-- TITULO -->
             <li id="header_columna">SEGUIMIENTO DE LA PROGRAMACION</li>
+          
             <!-- AYUDA -->
             <li id="enlaces_menu_estilo">
                 <a href="https://difficult-cow-020.notion.site/Seguimiento-Centros-Educativos-196b2e2f06da801a8d0ec0e90262f8a3" target="_blank">
@@ -61,8 +62,23 @@
                         <li id="enlaces_menu_estilo"><a href="<?php echo RUTA_URL?>/centro/personal"><i class="fas fa-user-tie"></i> Personal del centro</a></li>
                     </ul>
                 </div>
+
+             
+
+              
+
+                
         <?php endif; 
         endforeach ;?>
+
+                <div class="columnas col-12 col-md-3 col-sm-4 pt-5">
+                    <ul class="enlaces">
+                        <li id="header_columna">OTRAS APLICACIONES</li>
+                        <li id="enlaces_menu_estilo"><a href="<?php echo RUTA_URL?>/facturas"><i class="fas fa-calculator"></i> Facturas</a></li>
+                        <li id="enlaces_menu_estilo"><a href="<?php echo RUTA_URL?>/mantenimiento_informatico"><i class="fas fa-desktop"></i> Mantenimiento Informático</a></li>
+                        <li id="enlaces_menu_estilo"><a href="<?php echo RUTA_URL?>/orientacion"><i class="fas fa-user-tie"></i> Orientación (PEAC)</a></li>
+                    </ul>
+                </div>
 
 
 </div>

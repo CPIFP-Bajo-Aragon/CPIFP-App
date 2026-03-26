@@ -25,7 +25,7 @@
 
           <!-- logo centro -->
           <div class="row justify-content-center mt-3">
-            <img src="<?php echo RUTA_LOGOS?>logo_cpifp.png" id="logo_login_estilo">
+            <img src="<?php echo RUTA_LOGOS?>logo.png" id="logo_login_estilo">
           </div>
 
           <!-- usuario -->

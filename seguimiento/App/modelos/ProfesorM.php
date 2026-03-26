@@ -96,16 +96,16 @@ public function codigo_verificacion($id_profe, $id_lectivo) {
 
 public function tiene_programacion($id_profe, $id_lectivo) {
    $this->db->query("SELECT m.id_modulo, m.modulo,
-      CASE WHEN p.id_programacion IS NOT NULL THEN 1 ELSE 0 END AS tiene_programacion
-   FROM cpifp_profesor_modulo pm
-   INNER JOIN cpifp_modulo m ON pm.id_modulo = m.id_modulo
-   LEFT JOIN seg_programaciones p ON p.id_modulo = m.id_modulo AND p.activa = 1  
-   WHERE pm.id_profesor = :id_profe
-   AND pm.id_lectivo = :id_lectivo
-   GROUP BY m.id_modulo;");
-   $this->db->bind(':id_lectivo',$id_lectivo);  
-   $this->db->bind(':id_profe', $id_profe);
-   return $this->db->registros();
+   MAX(CASE WHEN p.id_programacion IS NOT NULL THEN 1 ELSE 0 END) AS tiene_programacion
+FROM cpifp_profesor_modulo pm
+INNER JOIN cpifp_modulo m ON pm.id_modulo = m.id_modulo
+LEFT JOIN seg_programaciones p ON p.id_modulo = m.id_modulo AND p.activa = 1
+WHERE pm.id_profesor = :id_profe
+AND pm.id_lectivo = :id_lectivo
+GROUP BY m.id_modulo, m.modulo;");
+$this->db->bind(':id_lectivo', $id_lectivo);
+$this->db->bind(':id_profe', $id_profe);
+return $this->db->registros();
 }
 
 

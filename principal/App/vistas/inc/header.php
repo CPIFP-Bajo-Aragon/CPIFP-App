@@ -26,7 +26,7 @@
         <header>
             <!-- Logo a la izquierda -->
             <div style="flex: 0 0 auto;">
-                <img id="logo" src="<?php echo RUTA_LOGOS?>logo_cpifp.png">
+                <img id="logo" src="<?php echo RUTA_LOGOS?>logo.png">
             </div>
             <!-- Nombre usuario centrado -->
             <div id="info_usuario">

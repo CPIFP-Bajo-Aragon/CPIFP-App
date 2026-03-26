@@ -1,0 +1,3 @@
+# Bloquear acceso web directo a los adjuntos
+# La descarga se hace siempre a través del controlador PHP
+Deny from all

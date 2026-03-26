@@ -16,6 +16,7 @@ class Inicio extends Controlador{
         $this->datos['accesos']->seguimiento = obtenerRol_seguimiento($this->datos['usuarioSesion']->roles);
         $this->datos['accesos']->mantenimiento = obtenerRol_mantenimiento($this->datos['usuarioSesion']->roles);
         $this->datos['accesos']->orientacion = obtenerRol_orientacion($this->datos['usuarioSesion']->roles);
+        /*FALTA OBTENER ROL FACTURAS*/
         $this->vista('inicio', $this->datos);
     }
 

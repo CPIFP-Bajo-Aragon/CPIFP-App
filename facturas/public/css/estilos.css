@@ -1,0 +1,293 @@
+/*
+ * estilos_facturas.css
+ * Apariencia unificada con el MVC de seguimiento
+ */
+
+
+/* =====================================================================
+   HEADER
+   ===================================================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#boton_logout {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+}
+
+#boton_logout:hover {
+    background-color: orangered;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        gap: 10px;
+    }
+}
+
+
+/* =====================================================================
+   NAVBAR
+   ===================================================================== */
+
+.navbar {
+    background-color: #2C3E50;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ECF0F1;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffffff;
+    background-color: #2980B9;
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    background-color: #2980B9;
+}
+
+/* Destino seleccionado en el centro de la navbar */
+.navbar-destino {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #2980B9;
+    padding: 6px 16px;
+    border-radius: 5px;
+}
+
+
+/* =====================================================================
+   TARJETA / CONTENEDOR PRINCIPAL
+   ===================================================================== */
+
+.tarjeta {
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+#ciclo_encabezado {
+    font-size: 1.4rem;
+    color: #0583c3;
+    font-weight: bold;
+}
+
+
+/* =====================================================================
+   TABLAS
+   ===================================================================== */
+
+.tabla-formato {
+    table-layout: auto;
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid lightgrey;
+}
+
+.tabla-formato th,
+.tabla-formato td {
+    border: 1px solid lightgrey;
+    padding: 8px 12px;
+    vertical-align: middle;
+}
+
+.tabla-formato thead th {
+    background-color: #0583c3;
+    color: white;
+}
+
+.tabla-formato tbody td a {
+    color: #0583c3;
+    text-decoration: none;
+}
+
+.tabla-formato tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+
+/* =====================================================================
+   ICONOS
+   ===================================================================== */
+
+.icono {
+    width: 25px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.circulo_mas {
+    color: #0583c3;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.circulo_mas:hover {
+    color: orangered;
+}
+
+
+/* =====================================================================
+   BOTONES
+   ===================================================================== */
+
+.btn-custom {
+    background-color: white;
+    color: #0583c3;
+    border: 1px solid #0583c3;
+}
+
+.btn-custom:hover,
+.btn-custom.active {
+    background-color: #0583c3;
+    color: white;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #2980b9;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.btn-volver:hover {
+    background-color: orangered;
+    color: white;
+}
+
+#boton-modal {
+    background-color: #0583c3;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+}
+
+#boton-modal:hover {
+    background-color: orangered;
+    color: white;
+}
+
+
+/* =====================================================================
+   MODALES
+   ===================================================================== */
+
+.modal-header {
+    background-color: #d6eaf8;
+}
+
+.modal-title {
+    color: #0583c3;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.input-group-text {
+    background-color: #d6eaf8;
+    color: #0583c3;
+    font-weight: bold;
+}
+
+
+/* =====================================================================
+   PAGINACIÓN
+   ===================================================================== */
+
+.pagination {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.pagination li button {
+    padding: 6px 12px;
+    border: 1px solid #0583c3;
+    background-color: white;
+    color: #0583c3;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pagination li button:hover,
+.pagination li.active button {
+    background-color: #0583c3;
+    color: white;
+}
+
+.pagination li button:disabled {
+    background-color: #0583c3;
+    color: white;
+    cursor: default;
+}
+
+
+/* =====================================================================
+   BADGES
+   ===================================================================== */
+
+.badge {
+    background-color: orangered;
+    color: white;
+    border-radius: 50%;
+    padding: 0.3em 0.6em;
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+
+/* =====================================================================
+   FOOTER
+   ===================================================================== */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #dee2e6;
+}
+
+footer .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

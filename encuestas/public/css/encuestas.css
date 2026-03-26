@@ -1,0 +1,65 @@
+/* ============================================================
+   encuestas.css  –  Estilos propios del módulo de encuestas
+   Complementa el CSS compartido de seguimiento
+   ============================================================ */
+
+/* ── Colores del módulo ──────────────────────────────────────── */
+:root {
+    --enc-primary:   #0583c3;
+    --enc-success:   #27ae60;
+    --enc-warning:   #e67e22;
+    --enc-danger:    #e74c3c;
+}
+
+/* ── Botón principal (reutiliza clase ya existente) ──────────── */
+.btn-custom {
+    background-color: var(--enc-primary);
+    color: #fff;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #0671a6;
+    color: #fff;
+}
+
+/* ── Tarjeta de encuesta en el formulario público ────────────── */
+.pregunta-card {
+    border-left: 4px solid #dee2e6;
+    transition: border-color 0.2s;
+}
+.pregunta-card.respondida {
+    border-left: 4px solid var(--enc-success);
+}
+
+/* ── Barra de progreso de resultados ─────────────────────────── */
+.progress {
+    border-radius: 6px;
+    background: #e9ecef;
+}
+
+/* ── Tabla de encuestas ──────────────────────────────────────── */
+.table thead th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+/* ── Navbar activa ───────────────────────────────────────────── */
+.navbar .nav-link.active {
+    font-weight: bold;
+    border-bottom: 3px solid var(--enc-primary);
+}
+
+/* ── Badge de puntuación alta / media / baja ─────────────────── */
+.badge-alta   { background: var(--enc-success); }
+.badge-media  { background: var(--enc-warning); }
+.badge-baja   { background: var(--enc-danger); }
+
+/* ── Responsive: radio buttons en móvil ──────────────────────── */
+@media (max-width: 576px) {
+    .btn-radio-nota {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+}

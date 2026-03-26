@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.page {
+    width: 19cm;
+    height: 27cm;
+    padding: 1cm;
+    margin: 4cm;
+    background: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+.cabecera{
+    padding: 1cm;
+    background: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.datosFactura
+{
+    padding: 1cm;
+    background: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    
+}
+
+.caja{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+.logo{
+    width: 8cm;
+}
+
+.detalle{
+    padding: 2cm;
+    background: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+.valoracion{
+    padding: 2cm;
+    background: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 12pt;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 11pt;
+    margin: 5px 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+strong {
+    font-weight: bold;
+}
